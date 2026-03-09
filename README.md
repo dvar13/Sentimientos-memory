@@ -7,7 +7,7 @@ Este repositorio contiene el pipeline completo de Machine Learning Operations (M
 ##  Arquitectura del Sistema 
 
 
-![Arquitectura MLOps](images/AWS-MLFLOW.svg)
+[![Arquitectura MLOps](images/AWS-MLFLOW.jpeg)](docs/arquitectura_mlops.pdf)
  
 
 El flujo de trabajo está diseñado para garantizar la reproducibilidad,
