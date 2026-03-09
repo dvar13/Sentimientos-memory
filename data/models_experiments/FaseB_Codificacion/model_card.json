@@ -1,0 +1,16 @@
+{
+    "model_name": "Codificacion_TFIDF_Bigrama",
+    "description": "Modelo de evaluaci\u00f3n de codificaci\u00f3n usando TFIDF y Bigramas.",
+    "author": "Daniel Varela",
+    "dataset_version": "Exp04_Solo_Elongacion",
+    "training_data_path": "parcial-pln/data/processed/Spacy/Exp04_Solo_Elongacion/train_parquet",
+    "version": "2026-03-06 02:56:34.452715",
+    "performance": {
+        "validation_accuracy": 0.7775,
+        "validation_f1_macro": 0.7775
+    },
+    "intended_use": "Encontrar la mejor representaci\u00f3n vectorial de los textos.",
+    "limitations": [
+        "Dependiente de las features extra\u00eddas por spaCy"
+    ]
+}

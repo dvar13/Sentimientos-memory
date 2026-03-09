@@ -1,0 +1,18 @@
+{
+  "dataframe_split": {
+    "columns": [
+      "clean_text"
+    ],
+    "data": [
+      [
+        "i'm very excited about my upcoming trip to washington state. gonna have a blast taking pictures at lacie's wedding!!"
+      ],
+      [
+        "finally worked out pressing the button on the g1 headset twice skips to the next random song. only took me 7 months"
+      ],
+      [
+        "ughhhh not happy"
+      ]
+    ]
+  }
+}

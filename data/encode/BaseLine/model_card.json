@@ -1,0 +1,18 @@
+{
+    "model_name": "BoW_MultinomialNB_Baseline",
+    "description": "Baselines sentiment classification model using Bag of Words and Multinomial Naive Bayes.",
+    "author": "Daniel Varela",
+    "dataset_version": "minimal_clean",
+    "training_data_path": "parcial-pln/data/processed/limpieza_minima/train_parquet",
+    "version": "2026-03-06 21:23:03.947004",
+    "performance": {
+        "validation_accuracy": 0.774,
+        "validation_f1_macro": 0.774
+    },
+    "intended_use": "Baseline benchmark for sentiment classification.",
+    "limitations": [
+        "No semantic understanding",
+        "No negation handling",
+        "Limited vocabulary due to max_features constraint"
+    ]
+}

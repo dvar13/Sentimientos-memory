@@ -1,0 +1,16 @@
+{
+    "model_name": "Exp04_Solo_Elongacion",
+    "description": "Modelo de evaluaci\u00f3n de ablaci\u00f3n (Phase A) usando BoW y Naive Bayes.",
+    "author": "Daniel Varela",
+    "dataset_version": "Exp04_Solo_Elongacion",
+    "training_data_path": "parcial-pln/data/processed/Spacy/Exp04_Solo_Elongacion/train_parquet",
+    "version": "2026-03-06 02:19:39.965619",
+    "performance": {
+        "validation_accuracy": 0.7748,
+        "validation_f1_macro": 0.7748
+    },
+    "intended_use": "Encontrar la mejor limpieza de texto (Ablaci\u00f3n) para el proyecto.",
+    "limitations": [
+        "Dependiente de la configuraci\u00f3n espec\u00edfica de spaCy"
+    ]
+}
