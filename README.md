@@ -45,6 +45,9 @@ Nuestro pipeline clásico, enriquecido con ingeniería de características (Feat
 ##  Equipo (NPL) 
 
 * **Líder / MLOps Engineer:** Daniel Varela
+* **Modelos / Fase A:** Gustavo Takashi
+* **Modelos:** Oscar Guerrero
+* **Modelos:** Juan Silva
 
 ---
 
