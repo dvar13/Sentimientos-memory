@@ -117,7 +117,7 @@ async def get_ablation_summary():
             
             <h3>Conclusiones Analíticas</h3>
             <p><b>Conclusión:</b> Tras analizar los datos extraídos de MLflow, determinamos que la lematización y la remoción de stopwords eliminaban contexto crítico para el análisis de sentimientos. El experimento ganador demostró que conservar la puntuación y normalizar las elongaciones maximiza el F1-Score.</p>
-            <p><b>Autor de esta fase:</b> [Nombre del compañero que hizo la Fase A]</p>
+            <p><b>Autor de esta fase:</b> [Gustavo Takashi]</p>
         </body>
     </html>
     """
@@ -159,7 +159,6 @@ async def get_work_distribution():
     """
     Tabla de responsabilidades del equipo.
     """
-    # 🚨 Modifica esto con los nombres reales y tareas de tu equipo
     return {
         "equipo": "NPL",
         "miembros": [
