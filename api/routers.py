@@ -165,15 +165,19 @@ async def get_work_distribution():
         "miembros": [
             {
                 "nombre": "Daniel Varela",
-                "responsabilidades": ["Fase C (Modelos Clásicos)", "Fase D (Hugging Face)", "Arquitectura MLOps AWS y FastAPI"]
+                "responsabilidades": ["Fase B (Vectorización TF-IDF/BoW)", "Fase D (Hugging Face)", "Arquitectura MLOps AWS y FastAPI"]
             },
             {
-                "nombre": "Miembro 2",
+                "nombre": "Gustavo Takashi",
                 "responsabilidades": ["Fase A (Ablación y spaCy)", "Pipeline de Limpieza"]
             },
             {
-                "nombre": "Miembro 3",
-                "responsabilidades": ["Fase B (Vectorización TF-IDF/BoW)", "Generación de Gráficas y Reportes"]
+                "nombre": "Oscar Guerrero",
+                "responsabilidades": ["Fase C (Modelos Clásicos)","Generación de Gráficas y Reportes"]
+            },
+            {
+                "nombre": "Juan Silva",
+                "responsabilidades": ["Fase C (Modelos Clásicos)", "Generación de Gráficas y Reportes"]
             }
         ]
     }
