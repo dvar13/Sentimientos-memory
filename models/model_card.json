@@ -3,7 +3,6 @@
     "description": "Campe\u00f3n Final. Algoritmo: MLP. Vectorizador: TFIDF. NLP: Exp04_Solo_Elongacion.",
     "author": "Oscar Penuela",
     "dataset_version": "Exp04_Solo_Elongacion",
-    "training_data_path": "parcial-pln/data/processed/Spacy/Exp04_Solo_Elongacion/train_parquet",
     "version": "2026-03-08 20:06:40.190298",
     "performance": {
         "validation_accuracy": 0.8074,
