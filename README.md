@@ -28,7 +28,7 @@ El proyecto culminó en una comparativa estricta en el entorno de pruebas (Test 
 
 | Modelo | F1-Score Macro | Tiempo de Inferencia (Test Set) |
 | --- | --- | --- |
-| ** Regresión Logística (Nuestro Campeón)** | **0.8084** | **4.80 segundos** | 
+|  **MLP (Nuestro Campeón)** | **0.8084** | **4.80 segundos** | 
 |  Hugging Face (DistilBERT) | 0.7006 | 7191.28 segundos | 
 
 **Conclusión de Negocio:**
@@ -37,7 +37,7 @@ Nuestro pipeline clásico, enriquecido con ingeniería de características (Feat
 ## Stack Tecnológico 
 
 * **Procesamiento de Datos & NLP:** Pandas, PyArrow, spaCy.
-* **Machine Learning:** Scikit-Learn (MLP, TF-IDF).
+* **Machine Learning:** Scikit-Learn (KNN,Logistic Regresion, Random Forest, SVM, MLP, TF-IDF).
 * **Deep Learning:** PyTorch, Transformers (Hugging Face).
 * **MLOps & Tracking:** MLflow v3.1+.
 * **Cloud Infrastructure:** AWS S3, Amazon EC2, AWS Lambda, AWS Amazon SageMaker AI. 
