@@ -91,10 +91,10 @@ async def get_ablation_summary():
                     <th>Elongación</th>
                     <th>F1-Score (Macro)</th>
                 </tr>
-                <tr><td>Exp01_Base</td><td>Sí</td><td>Sí</td><td>Sí</td><td>No</td><td>0.7650</td></tr>
-                <tr><td>Exp02_Sin_Lema</td><td>No</td><td>Sí</td><td>Sí</td><td>No</td><td>0.7720</td></tr>
+                <tr><td>Exp03_Solo_Puntuacion</td><td>Sí</td><td>Sí</td><td>Sí</td><td>No</td><td>0.7736</td></tr>
+                <tr><td>Exp10_Punc_Elongacion</td><td>No</td><td>Sí</td><td>Sí</td><td>No</td><td>0.7748</td></tr>
                 <tr style="background-color: #d4edda;">
-                    <td><b>Exp04_Ganador</b></td>
+                    <td><b>Exp04_Solo_Elongacionr</b></td>
                     <td><b>No</b></td>
                     <td><b>No</b></td>
                     <td><b>No</b></td>
