@@ -97,12 +97,11 @@ async def get_ablation_summary():
                     <td><b>Exp04_Ganador</b></td>
                     <td><b>No</b></td>
                     <td><b>No</b></td>
+                    <td><b>No</b></td>
                     <td><b>Sí</b></td>
-                    <td><b>Sí</b></td>
-                    <td><b>0.8120</b></td>
+                    <td><b>0.7744</b></td>
                 </tr>
             </table>
-            <p><i>Nota: Si tu equipo tiene más experimentos (ej. Exp03), agrégalos a esta tabla en el código.</i></p>
             
             <h3>Gráfica Comparativa</h3>
             <img src="/static/ablation_plot.png" alt="Gráfica de Ablación" width="700" style="border:1px solid #ccc; border-radius: 5px;"/>
