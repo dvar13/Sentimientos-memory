@@ -34,7 +34,7 @@ async def lifespan(app: FastAPI):
     try:
         # A. Descargar y Cargar el Model Card
         print("Descargando model_card.json...")
-        s3_client.download_file(S3_BUCKET_NAME, f"{S3_MODEL_PREFIX}/model_card.json", "model_card.json")
+        s3_client.download_file(S3_BUCKET_NAME, f"{S3_MODEL_CARD}/model_card.json", "model_card.json")
         with open("model_card.json", "r") as f:
             app.state.model_card = json.load(f)
             
