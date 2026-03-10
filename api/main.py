@@ -15,7 +15,7 @@ S3_BUCKET_NAME = os.getenv("S3_BUCKET_NAME")
 # Ajusta esto al nombre real de tu archivo .pkl guardado en la Fase C
 MODEL_FILE_NAME = "model.pkl" 
 S3_MODEL_CARD = "data/produccion/Modelos"
-S3_MODEL_PREFIX = "data/produccion/Modelos/tmp_champion_model/"
+S3_MODEL_PREFIX = "data/produccion/Modelos/tmp_champion_model"
 
 # ==========================================
 # 2. EVENTO DE INICIO (Lifespan)
