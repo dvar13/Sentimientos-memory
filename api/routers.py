@@ -60,32 +60,38 @@ async def predict_sentiment(payload: PredictRequest, request: Request):
 # ==========================================
 @router.get("/ablation_summary", response_class=HTMLResponse, summary="Reporte visual de Fase A (Desde MLflow)")
 async def get_ablation_summary():
-    """
-    Se conecta a MLflow Tracking, extrae los resultados de los experimentos de la Fase A
-    y genera una tabla dinámica, junto con las conclusiones.
-    """
     try:
-        # 1. Buscar los experimentos en MLflow (Ajusta el nombre al que usaste en Fase A)
-        # Nota: Asume que las credenciales de MLflow están cargadas vía .env en el main.py
-        runs_df = mlflow.search_runs(experiment_names=["Sentimientos403_FaseA"]) 
+        # 1. FORZAR LA CONEXIÓN AL SERVIDOR DE MLFLOW
+        tracking_uri = os.getenv("MLFLOW_TRACKING_URI")
+        mlflow.set_tracking_uri(tracking_uri)
+        print(f"Conectando a MLflow en: {tracking_uri}")
         
-        # 2. Filtrar y ordenar los datos relevantes (De mayor a menor F1)
+        # 2. BUSCAR EL EXPERIMENTO ( Pon el nombre EXACTO de la interfaz de MLflow)
+        nombre_experimento = "Sentimientos403_FaseA" # ¡Cambia esto si es necesario!
+        print(f"Buscando experimento: {nombre_experimento}")
+        
+        runs_df = mlflow.search_runs(experiment_names=[nombre_experimento]) 
+        
+        # 3. VERIFICAR QUÉ ENCONTRÓ
+        print(f"Se encontraron {len(runs_df)} ejecuciones en MLflow.")
+        
         if not runs_df.empty:
-            # Seleccionamos solo las columnas que nos importan
+            # Filtramos columnas relevantes
             cols_to_keep = [col for col in runs_df.columns if "params" in col or "metrics" in col or "tags.mlflow.runName" in col]
             df_filtered = runs_df[cols_to_keep].copy()
             
-            # Limpiamos los nombres de las columnas para que se vean bien en la tabla
+            # Limpiamos nombres para la tabla
             df_filtered.columns = [c.replace("params.", "").replace("metrics.", "").replace("tags.mlflow.runName", "Experimento") for c in df_filtered.columns]
             
-            # Ordenamos por la métrica f1 (ajusta el nombre exacto de tu métrica si es diferente)
-            if "f1_score" in df_filtered.columns:
-                df_filtered = df_filtered.sort_values(by="f1_score", ascending=False)
+            # OJO: Verifica si tu métrica se llama exactamente "f1_score" o "f1_macro"
+            nombre_metrica = "f1_macro" 
+            if nombre_metrica in df_filtered.columns:
+                df_filtered = df_filtered.sort_values(by=nombre_metrica, ascending=False)
             
-            # Generamos las filas de la tabla HTML dinámicamente
+            # Generamos la tabla
             tabla_html = df_filtered.to_html(index=False, classes="table-mlflow", border=0, justify="center")
         else:
-            tabla_html = "<p>No se encontraron experimentos registrados en MLflow para la Fase A.</p>"
+            tabla_html = f"<p>No se encontraron experimentos bajo el nombre: <b>{nombre_experimento}</b>.</p>"
 
     except Exception as e:
         tabla_html = f"<p>Error conectando a MLflow: {str(e)}</p>"
